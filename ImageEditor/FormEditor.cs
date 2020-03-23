@@ -21,8 +21,23 @@ namespace ImageEditor
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bmp = new Bitmap(openFileDialog1.FileName);
-                pictureBoxEditor.BackgroundImage = bmp;
+                pictureBoxSource.BackgroundImage = bmp;
             }
+        }
+
+        private void MenuItemBrightness_Click(object sender, EventArgs e)
+        {
+            Bitmap tempBmp = new Bitmap(pictureBoxSource.BackgroundImage);
+
+            for (int x = 0; x < tempBmp.Size.Width; x++)
+                for (int y = 0; y < tempBmp.Size.Height; y++)
+                {
+                    Color c = tempBmp.GetPixel(x, y);
+                    Color newColor = Color.FromArgb(c.A, Math.Min(255, c.R + 100), Math.Min(c.G + 100, 255), Math.Min(c.B + 100, 255));
+                    tempBmp.SetPixel(x, y, newColor);
+                }
+            pictureBoxEditor.Image = tempBmp;
+
         }
     }
 }
