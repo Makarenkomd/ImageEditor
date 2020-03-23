@@ -39,5 +39,18 @@ namespace ImageEditor
             pictureBoxEditor.Image = tempBmp;
 
         }
+
+        private void MenuItemContrast_Click(object sender, EventArgs e)
+        {
+            Bitmap tempBmp = new Bitmap(pictureBoxSource.BackgroundImage);
+            for (int x = 0; x < tempBmp.Size.Width; x++)
+                for (int y = 0; y < tempBmp.Size.Height; y++)
+                {
+                    Color c = tempBmp.GetPixel(x, y);
+                    Color newColor = Color.FromArgb(c.A, Math.Min(255, c.R * 2), Math.Min(c.G * 2, 255), Math.Min(c.B * 2, 255));
+                    tempBmp.SetPixel(x, y, newColor);
+                }
+            pictureBoxEditor.Image = tempBmp;
+        }
     }
 }

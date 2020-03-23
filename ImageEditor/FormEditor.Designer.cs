@@ -39,7 +39,7 @@
             this.pictureBoxEditor = new System.Windows.Forms.PictureBox();
             this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemBrightness = new System.Windows.Forms.ToolStripMenuItem();
-            this.контрастностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemContrast = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditor)).BeginInit();
@@ -117,7 +117,7 @@
             // 
             this.фильтрыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemBrightness,
-            this.контрастностьToolStripMenuItem});
+            this.MenuItemContrast});
             this.фильтрыToolStripMenuItem.Name = "фильтрыToolStripMenuItem";
             this.фильтрыToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.фильтрыToolStripMenuItem.Text = "Фильтры";
@@ -129,11 +129,12 @@
             this.MenuItemBrightness.Text = "Яркость";
             this.MenuItemBrightness.Click += new System.EventHandler(this.MenuItemBrightness_Click);
             // 
-            // контрастностьToolStripMenuItem
+            // MenuItemContrast
             // 
-            this.контрастностьToolStripMenuItem.Name = "контрастностьToolStripMenuItem";
-            this.контрастностьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.контрастностьToolStripMenuItem.Text = "Контрастность";
+            this.MenuItemContrast.Name = "MenuItemContrast";
+            this.MenuItemContrast.Size = new System.Drawing.Size(180, 22);
+            this.MenuItemContrast.Text = "Контрастность";
+            this.MenuItemContrast.Click += new System.EventHandler(this.MenuItemContrast_Click);
             // 
             // FormEditor
             // 
@@ -168,7 +169,7 @@
         private System.Windows.Forms.PictureBox pictureBoxEditor;
         private System.Windows.Forms.ToolStripMenuItem фильтрыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemBrightness;
-        private System.Windows.Forms.ToolStripMenuItem контрастностьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemContrast;
     }
 }
 
