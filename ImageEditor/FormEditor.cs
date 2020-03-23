@@ -15,5 +15,14 @@ namespace ImageEditor
         {
             InitializeComponent();
         }
+
+        private void MenuItemOpen_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(openFileDialog1.FileName);
+                pictureBoxEditor.BackgroundImage = bmp;
+            }
+        }
     }
 }
